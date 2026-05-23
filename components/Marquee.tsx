@@ -1,6 +1,6 @@
 "use client";
 
-const items = ["SS 2025", "New Collection", "Made in Africa", "Wear Your Truth", "Roberta Studio"];
+const items = ["SS 2025", "New Collection", "Made in Africa", "Wear Your Truth", "Araura Fashion"];
 
 export default function Marquee() {
   // Duplicate for seamless loop

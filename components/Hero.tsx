@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="relative pt-56 lg:pt-28 flex flex-col justify-end overflow-hidden bg-[#05050a]">
+    <section className="relative pt-46 lg:pt-50 flex flex-col justify-end overflow-hidden bg-[#05050a]">
 
       {/* Background video */}
       <video
@@ -34,16 +36,12 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-30 px-12 pb-16 max-md:px-6 max-md:pb-10">
 
-        {/* Label */}
-        <p className="flex items-center gap-4 text-[0.6rem] font-light tracking-[0.4em] uppercase text-ice mb-5 animate-fade-up">
-          <span className="inline-block w-12 h-px bg-electric flex-shrink-0" />
-          
-        </p>
+        
 
         {/* Title */}
-        <h1 className="font-bebas text-[clamp(5rem,14vw,15rem)] leading-[0.88] tracking-wide mb-8 animate-fade-up [animation-delay:100ms]">
+        <h1 className="font-bebas text-[clamp(5rem,14vw,7rem)] leading-[0.88] tracking-wide mb-8 animate-fade-up [animation-delay:100ms]">
           <span className="block text-transparent" style={{ WebkitTextStroke: "2px #f0f0f0" }}>WEAR</span>
-          <span className="block text-white">YOUR</span>
+          <span className="block text-white animate-pulse">YOUR</span>
           <span className="block text-transparent" style={{ WebkitTextStroke: "2px #2a3fff" }}>TRUTH</span>
         </h1>
 
@@ -54,19 +52,12 @@ export default function Hero() {
             with convention, with expectation, with the silence we&apos;ve been told to keep.
           </p>
           <div className="flex flex-col items-end gap-3 max-md:items-start">
-            <a
-              href="#collection"
-              className="font-bebas rounded-lg text-2xl tracking-[0.25em] bg-white text-[#05050a] px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
+            <Link
+              href="#"
+              className="font-bebas rounded-lg text-lg tracking-[0.25em] bg-white text-[#05050a] px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
             >
               View Collection
-            </a>
-            <a
-              href="#collection"
-              className="text-lg tracking-[0.3em] uppercase text-white/20 no-underline flex items-center gap-3"
-            >
-              Scroll to explore
-              <span className="inline-block w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

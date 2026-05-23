@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link"
 import { useState } from "react";
 
 const COMMISSION_TYPES = [
@@ -48,12 +49,11 @@ export default function Commissions() {
         {/* ── Left — info ── */}
         <div className="bg-[#05050a] px-14 py-20 flex flex-col justify-between max-md:px-6 max-md:py-12">
           <div>
-            <p className="flex items-center gap-3 font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-white/25 mb-8">
-              <span className="inline-block w-8 h-px bg-white/20 flex-shrink-0" />
+            <p className="flex items-center gap-3 font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-white/25 mb-4">
               Get in Touch
             </p>
 
-            <h2 className="font-bebas text-[clamp(3rem,5vw,5.5rem)] leading-[0.95] tracking-wide text-white mb-10">
+            <h2 className="font-bebas text-[clamp(3rem,5vw,5.5rem)] leading-[0.95] tracking-wide text-electric mb-4">
               WEAR YOUR
               <br />
               <span className="text-[#2a3fff]">TRUTH.</span>
@@ -77,16 +77,15 @@ export default function Commissions() {
               {[
                 {
                   label: "Email",
-                  value: "studio@roberta.design",
-                  href: "mailto:studio@roberta.design",
+                  value: "roberta@araura.com",
+                  href: "#",
                 },
                 {
                   label: "Instagram",
-                  value: "@roberta.design",
-                  href: "https://instagram.com/roberta.design",
+                  value: "@roberta.araura",
+                  href: "#",
                 },
                 { label: "Based in", value: "Harare, Zimbabwe", href: null },
-                { label: "Response", value: "Within 48 hours", href: null },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -95,21 +94,21 @@ export default function Commissions() {
                   <div
                     className={`flex items-center justify-center w-2 h-2 rounded-full ${
                       i === 0
-                        ? "bg-[#C8352A]"
+                        ? "bg-electric"
                         : i === 1
-                          ? "bg-[#2a3fff]"
+                          ? "bg-gray-500"
                           : i === 2
-                            ? "bg-[#013E37]"
+                            ? "bg-white"
                             : "bg-[#2a2a2a]"
                     }`}
                   >
-                    <span className="font-raleway text-[0.45rem] tracking-[0.2em] uppercase text-white/50 text-center">
+                    <span className="font-raleway text-[0.45rem] tracking-[0.2em] text-white/50 text-center">
                       {/* {item.label} */}
                     </span>
                   </div>
                   <div className="px-6 py-4 flex items-center">
                     {item.href ? (
-                      <a
+                      <Link
                         href={item.href}
                         target={
                           item.href.startsWith("http") ? "_blank" : undefined
@@ -122,7 +121,7 @@ export default function Commissions() {
                         className="font-bebas text-[0.82rem] tracking-[0.06em] text-white/60 no-underline hover:text-white transition-colors"
                       >
                         {item.value}
-                      </a>
+                      </Link>
                     ) : (
                       <span className="font-bebas text-[0.82rem] tracking-[0.06em] text-white/60">
                         {item.value}
@@ -133,7 +132,7 @@ export default function Commissions() {
               ))}
             </div>
 
-            <div className="relative mt-6 h-40 overflow-hidden rounded-[1.25rem] border border-white/[0.08] bg-white/[0.02]">
+            <div className="relative mt-6 h-58 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
               <Image
                 src="/clarissa-watson-69shQ1GRiDY-unsplash.jpg"
                 alt="Textile detail in the background"
@@ -157,7 +156,7 @@ export default function Commissions() {
         {/* ── Right — enquiry form ── */}
         <div className="bg-[#05050a] px-14 py-20 max-md:px-6 max-md:py-12">
           <div className="mb-8">
-            <p className="font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-white/25 mb-3">
+            <p className="font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-electric mb-4">
               Send an Enquiry
             </p>
             <p className="font-raleway text-[0.78rem] leading-[1.8] text-white/45 max-w-[40ch]">
@@ -168,7 +167,7 @@ export default function Commissions() {
 
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="relative overflow-hidden rounded-[1.5rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-[1px] shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+            className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-[1px] shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
           >
             <div className="rounded-[calc(1.5rem-1px)] bg-[#09090f]">
               <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-white/[0.08]">
@@ -294,14 +293,14 @@ export default function Commissions() {
                     Response time
                   </p>
                   <p className="font-raleway text-[0.75rem] text-white/45">
-                    We usually reply within 48 hours.
+                    We reply within 24 hours.
                   </p>
                 </div>
                 <button
                   type="submit"
-                  className="font-bebas text-[0.82rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3.5 rounded-full border-none cursor-pointer hover:bg-[#2a3fff] hover:text-white transition-all duration-200 shadow-[0_12px_30px_rgba(255,255,255,0.12)] max-sm:w-full max-sm:text-center"
+                  className="font-bebas text-[0.82rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3.5 rounded-xl border-none cursor-pointer hover:bg-[#2a3fff] hover:text-white transition-all duration-200 max-sm:w-full max-sm:text-center"
                 >
-                  Send Enquiry →
+                  Send Enquiry
                 </button>
               </div>
             </div>

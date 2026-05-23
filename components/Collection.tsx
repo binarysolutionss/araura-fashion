@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const pieces = [
   {
     num: "01",
@@ -22,10 +24,9 @@ export default function Collection() {
     <section id="collection" className="bg-[#05050a] px-12 py-32 max-md:px-6 max-md:py-20">
 
       {/* Header */}
-      <div className="grid grid-cols-1 md:grid-cols-2 items-end gap-8 mb-20 pb-8 border-b border-white/[0.06]">
+      <div className="grid grid-cols-1 items-end gap-8 mb-20 pb-8 border-b border-white/[0.06]">
         <div>
           <p className="flex items-center gap-3 text-[0.6rem] font-light tracking-[0.4em] uppercase text-electric mb-4">
-            <span className="inline-block w-8 h-px bg-electric flex-shrink-0" />
             Latest Pieces
           </p>
           <h2 className="font-bebas text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-wider text-white">
@@ -37,7 +38,7 @@ export default function Collection() {
             GUARD
           </h2>
         </div>
-        <p className="text-[0.72rem] font-extralight leading-[1.9] text-white/40 italic max-w-[36ch] md:ml-auto">
+        <p className="text-[0.72rem] font-extralight leading-[1.9] text-white/70 max-w-[65ch]">
           Two statements. Rooted in heritage, stripped of apology.
           Mud cloth geometry meets sculptural drape —
           this is African power dressed for the future.
@@ -45,9 +46,9 @@ export default function Collection() {
       </div>
 
       {/* Pieces grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-electric/15">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {pieces.map((piece) => (
-          <div key={piece.num} className="relative overflow-hidden bg-[#05050a] group cursor-crosshair">
+          <div key={piece.num} className="relative overflow-hidden bg-[#05050a] group cursor-crosshair rounded-xl">
 
             {/* Ghost number */}
             <span
@@ -63,7 +64,7 @@ export default function Collection() {
               alt={piece.alt}
               className="w-full object-cover object-top block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               style={{
-                height: "85vh",
+                height: "65vh",
                 filter: "grayscale(15%) contrast(1.05)",
               }}
             />
@@ -83,12 +84,12 @@ export default function Collection() {
                   {piece.detail}
                 </div>
               </div>
-              <a
+              <Link
                 href="#"
-                className="text-[0.6rem] font-light tracking-[0.2em] uppercase text-white border border-electric px-4 py-2 no-underline transition-all duration-200 group-hover:bg-electric group-hover:text-white"
+                className="text-[0.6rem] font-light tracking-[0.2em] uppercase text-white border border-white/70 rounded-lg px-4 py-2 no-underline transition-all duration-200 group-hover:bg-electric group-hover:text-white"
               >
                 Inquire
-              </a>
+              </Link>
             </div>
           </div>
         ))}
