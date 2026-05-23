@@ -85,7 +85,7 @@ export default function Collection() {
               </div>
               <a
                 href="#"
-                className="text-[0.6rem] font-light tracking-[0.2em] uppercase text-electric border border-electric px-4 py-2 no-underline transition-all duration-200 group-hover:bg-electric group-hover:text-white"
+                className="text-[0.6rem] font-light tracking-[0.2em] uppercase text-white border border-electric px-4 py-2 no-underline transition-all duration-200 group-hover:bg-electric group-hover:text-white"
               >
                 Inquire
               </a>

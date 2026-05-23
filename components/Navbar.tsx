@@ -14,7 +14,7 @@ export default function Navbar() {
           <li key={item}>
             <a
               href="#"
-              className="text-lg font-light tracking-[0.3em] uppercase text-white/80 hover:text-white transition-colors no-underline"
+              className="text-sm font-light tracking-[0.3em] uppercase text-white/80 hover:text-white transition-colors no-underline"
             >
               {item}
             </a>

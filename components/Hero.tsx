@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="flex flex-col items-end gap-3 max-md:items-start">
             <a
               href="#collection"
-              className="font-bebas text-2xl tracking-[0.25em] bg-white text-[#05050a] px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
+              className="font-bebas rounded-lg text-2xl tracking-[0.25em] bg-white text-[#05050a] px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
             >
               View Collection
             </a>
