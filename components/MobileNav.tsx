@@ -37,7 +37,8 @@ export default function MobileNav() {
       <SheetContent
         side="right"
         className="w-[280px] p-0 bg-[#05050a] border-l border-white/[0.08] flex flex-col"
-        closeClassName="hidden"
+        // closeClassName="hidden"
+        showCloseButton={false}
       >
 
         {/* Electric blue top line */}
