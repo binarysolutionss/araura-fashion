@@ -39,7 +39,7 @@ export default function Commissions() {
               key={i}
               className="font-bebas text-[0.85rem] tracking-[0.25em] text-white px-10 inline-flex items-center gap-10 after:content-['✦'] after:text-[0.6rem] after:opacity-60"
             >
-              Commission a Piece
+              Commissioning a Piece
             </span>
           ))}
         </div>
