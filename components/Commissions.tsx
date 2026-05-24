@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import { useState } from "react";
 
 const COMMISSION_TYPES = [
@@ -28,22 +28,6 @@ export default function Commissions() {
 
   return (
     <section id="contact" className="bg-[#05050a] relative overflow-hidden">
-      {/* Marquee strip */}
-      <div className="bg-[#2a3fff] overflow-hidden py-3">
-        <div
-          className="flex whitespace-nowrap"
-          style={{ animation: "marquee 20s linear infinite" }}
-        >
-          {Array.from({ length: 8 }).map((_, i) => (
-            <span
-              key={i}
-              className="font-bebas text-[0.85rem] tracking-[0.25em] text-white px-10 inline-flex items-center gap-10 after:content-['✦'] after:text-[0.6rem] after:opacity-60"
-            >
-              Commissioning a Piece
-            </span>
-          ))}
-        </div>
-      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-white/[0.04]">
         {/* ── Left — info ── */}
@@ -67,22 +51,22 @@ export default function Commissions() {
             </h2>
 
             <p className="font-raleway text-[0.85rem] font-light leading-[1.9] text-white/40 max-w-[44ch] mb-12">
-              Every Roberta piece begins with a conversation. Tell us what you
+              Every Maita piece begins with a conversation. Tell us what you
               need — a custom garment, a collaboration, a press enquiry — and we
               will respond within 48 hours.
             </p>
 
             {/* Contact details */}
-            <div className="flex flex-col gap-[1px] bg-white/[0.04] mb-12">
+            <div className=" hidden flex flex-col gap-[1px] bg-white/[0.04] mb-12">
               {[
                 {
                   label: "Email",
-                  value: "roberta@araura.com",
+                  value: "Maita@araura.com",
                   href: "#",
                 },
                 {
                   label: "Instagram",
-                  value: "@roberta.araura",
+                  value: "@Maita.araura",
                   href: "#",
                 },
                 { label: "Based in", value: "Harare, Zimbabwe", href: null },
@@ -132,9 +116,9 @@ export default function Commissions() {
               ))}
             </div>
 
-            <div className="relative mt-6 h-58 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
+            <div className="relative mt-6 h-90 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
               <Image
-                src="/clarissa-watson-69shQ1GRiDY-unsplash.jpg"
+                src="/fanueal-mengistu-gcLzTsvpzC8-unsplash.jpg"
                 alt="Textile detail in the background"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

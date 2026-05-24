@@ -7,12 +7,12 @@ export default function Marquee() {
   const all = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="bg-electric overflow-hidden py-3.5">
+    <div className="bg-pink-500 overflow-hidden py-3.5">
       <div className="flex animate-marquee whitespace-nowrap">
         {all.map((item, i) => (
           <span
             key={i}
-            className="font-bebas text-[0.85rem] tracking-[0.25em] text-white px-10 inline-flex items-center gap-10 after:content-['✦'] after:text-[0.6rem] after:opacity-60"
+            className="font-bebas text-[0.85rem] tracking-[0.25em] text-black px-10 inline-flex items-center gap-10 after:content-['✦'] after:text-2xl after:animate-spin duration-100 after:opacity-60"
           >
             {item}
           </span>

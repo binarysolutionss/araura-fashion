@@ -5,7 +5,7 @@ import MobileNav from "@/components/MobileNav";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-12 h-16 mix-blend-difference max-md:mix-blend-normal max-md:bg-[rgba(5,5,10,0.7)] max-md:backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-12 h-16 mix-blend-difference max-md:mix-blend-normal bg-[rgba(5,5,10,0.7)] backdrop-blur-md">
 
       <Link href="#" className="font-bebas text-2xl tracking-[0.25em] text-white no-underline">
         ARAURA
@@ -13,11 +13,11 @@ export default function Navbar() {
 
       {/* Desktop links */}
       <ul className="hidden md:flex items-center gap-12 list-none">
-        {["Collections", "About", "Press", "Contact"].map((item) => (
+        {["Collections", "About", "Commissions"].map((item) => (
           <li key={item}>
             <Link 
-              href="#"
-              className="text-sm font-light tracking-[0.3em] uppercase text-white/80 hover:text-white hover:font-bold transition-colors no-underline"
+              href={`/${item.toLowerCase()}`}
+              className="text-xs font-light tracking-[0.3em] uppercase text-white/80 hover:text-white hover:font-bold transition-colors no-underline"
             >
               {item}
             </Link>

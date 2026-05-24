@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Raleway } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
@@ -45,7 +48,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${raleway.variable}`}>
-      <body className="font-raleway antialiased cursor-crosshair">{children}</body>
+      <body className="font-raleway antialiased cursor-crosshair bg-[#05050a]">
+        <Navbar />
+          <main>
+            {children}
+          </main>
+        <Footer />
+      </body>
     </html>
   );
 }

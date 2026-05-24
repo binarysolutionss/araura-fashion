@@ -4,21 +4,21 @@ import Link from "next/link";
 
 const LINKS = {
   Collections: [
-    { label: "SS 2025",       href: "#" },
+    { label: "SS 2025", href: "#" },
     { label: "Heritage Series", href: "#" },
-    { label: "Archive",       href: "#" },
-    { label: "Lookbook",      href: "#" },
+    { label: "Archive", href: "#" },
+    { label: "Lookbook", href: "#" },
   ],
   Studio: [
-    { label: "About",         href: "#" },
-    { label: "Process",       href: "#" },
-    { label: "Press",         href: "#" },
-    { label: "Stockists",     href: "#" },
+    { label: "About", href: "#" },
+    { label: "Process", href: "#" },
+    { label: "Press", href: "#" },
+    { label: "Stockists", href: "#" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Use",   href: "#" },
-    { label: "Returns",        href: "#" },
+    { label: "Terms of Use", href: "#" },
+    { label: "Returns", href: "#" },
   ],
 };
 
@@ -39,14 +39,11 @@ const BAUHAUS = [
 export default function Footer() {
   return (
     <footer className="bg-[#05050a]">
-
       {/* Electric line */}
       <div className="h-[2px] bg-gradient-to-r from-transparent via-[#2a3fff] to-transparent opacity-50" />
 
       <div className="px-14 pt-16 pb-10 max-md:px-6 max-md:pt-12">
-
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 md:gap-8 mb-16">
-
           {/* Brand col */}
           <div>
             <h3 className="font-bebas text-[1.8rem] tracking-[0.15em] text-white mb-1 leading-none">
@@ -110,7 +107,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex justify-between items-center flex-wrap gap-4 mb-6">
           <p className="font-raleway text-[0.52rem] tracking-wide text-white/15">
-            © {new Date().getFullYear()} Roberta Studio. All rights reserved.
+            © {new Date().getFullYear()} Araura Studio. All rights reserved.
           </p>
           <p className="font-raleway text-[0.52rem] tracking-wide text-white/15">
             Made by{" "}
@@ -125,7 +122,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-
     </footer>
   );
 }

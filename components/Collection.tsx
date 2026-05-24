@@ -5,16 +5,16 @@ import Link from "next/link";
 const pieces = [
   {
     num: "01",
-    src: "/42e20c2d00ea812a76d99a743cb2c045.jpg",
+    src: "/collections/photo-1708170236215-b6edcad7f49a.png",
     alt: "The Kaftan — Mudcloth Heritage Series",
     name: "The Kaftan",
     detail: "Mudcloth · Heritage Series · 2025",
   },
   {
     num: "02",
-    src: "/ff5aec570b869071c20563479f266959.jpg",
-    alt: "The Drape — Pleated Crêpe Signature Series",
-    name: "The Drape",
+    src: "/collections/kingsley-hemans-_VYEcLzGJYk-unsplash.jpg",
+    alt: "Wild Checkered — Pleated Crêpe Signature Series",
+    name: "Wild Checkered",
     detail: "Pleated Crêpe · Signature Series · 2025",
   },
 ];

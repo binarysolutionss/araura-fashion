@@ -10,10 +10,9 @@ import {
 } from "@/components/ui/sheet";
 
 const NAV_ITEMS = [
-  { label: "Collections", href: "#" },
-  { label: "Features",    href: "#" },
-  { label: "About",       href: "#" },
-  { label: "Contact",     href: "#contact" },
+  { label: "Collections", href: "/collections" },
+  { label: "About",       href: "/about" },
+  { label: "Commissions",     href: "/commissions" },
 ];
 
 export default function MobileNav() {
@@ -84,7 +83,7 @@ export default function MobileNav() {
         {/* CTA */}
         <div className="px-6 py-5 border-t border-white/[0.06] flex-shrink-0">
           <Link
-            href="#contact"
+            href="/commissions"
             onClick={close}
             className="block font-bebas text-[0.78rem] tracking-[0.2em] uppercase text-center text-[#05050a] bg-white py-4 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors duration-200"
           >

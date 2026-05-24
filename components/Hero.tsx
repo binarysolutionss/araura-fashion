@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 export default function Hero() {
   return (
     <section className="relative pt-46 lg:pt-50 flex flex-col justify-end overflow-hidden bg-[#05050a]">
@@ -27,16 +26,15 @@ export default function Hero() {
       />
 
       {/* Ghost year */}
-      <span className="hidden md:block absolute top-20 right-12 z-20 font-bebas text-[clamp(6rem,14vw,14rem)] leading-none tracking-tight text-transparent pointer-events-none select-none"
+      <span className="hidden md:block absolute top-46 lg:top-50 right-12 z-20 font-bebas text-[clamp(6rem,14vw,14rem)] leading-none tracking-tight text-transparent pointer-events-none select-none"
         style={{ WebkitTextStroke: "3px rgba(200,212,255,0.12)" }}
       >
-        2025
+        2026
       </span>
 
       {/* Content */}
       <div className="relative z-30 px-12 pb-16 max-md:px-6 max-md:pb-10">
-
-        
+       
 
         {/* Title */}
         <h1 className="font-bebas text-[clamp(5rem,14vw,7rem)] leading-[0.88] tracking-wide mb-8 animate-fade-up [animation-delay:100ms]">
@@ -61,9 +59,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Electric bottom line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px z-40 bg-gradient-to-r from-transparent via-electric to-transparent animate-line-glow" />
     </section>
   );
 }
