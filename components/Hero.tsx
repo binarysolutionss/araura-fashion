@@ -3,7 +3,7 @@
 import Link from "next/link";
 export default function Hero() {
   return (
-    <section className="relative pt-46 lg:pt-50 flex flex-col justify-end overflow-hidden bg-[#05050a]">
+    <section className="relative pt-46 lg:pt-40 flex flex-col justify-end overflow-hidden bg-[#05050a]">
 
       {/* Background video */}
       <video
@@ -45,13 +45,13 @@ export default function Hero() {
 
         {/* Bottom bar */}
         <div className="flex justify-between items-end gap-6 flex-wrap animate-fade-up [animation-delay:300ms]">
-          <p className="text-lg font-extralight leading-[1.8] text-white/40 max-w-[38ch] italic">
+          <p className="text-lg font-extralight leading-[1.8] text-white/40 max-w-[38ch]">
             Garments that speak before you do. Each piece is a confrontation —
             with convention, with expectation, with the silence we&apos;ve been told to keep.
           </p>
           <div className="flex flex-col items-end gap-3 max-md:items-start">
             <Link
-              href="#"
+              href="/collections"
               className="font-bebas rounded-lg text-lg tracking-[0.25em] bg-white text-[#05050a] px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
             >
               View Collection

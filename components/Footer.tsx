@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GrFacebook, GrInstagram, GrPhone, GrPinterest, GrWhatsapp } from "react-icons/gr";
 
 const LINKS = {
   Collections: [
@@ -23,10 +24,9 @@ const LINKS = {
 };
 
 const SOCIALS = [
-  { label: "IG", href: "#" },
-  { label: "TK", href: "#" },
-  { label: "BE", href: "#" },
-  { label: "LI", href: "#" },
+  { label: "IG", icon:'GrInstagram', href: "#" },
+  { label: "TK", icon:'GrPhone', href: "#" },
+  { label: "BE", icon:'GrPinterest', href: "#" },
 ];
 
 const BAUHAUS = [
@@ -54,16 +54,24 @@ export default function Footer() {
             </p>
 
             {/* Socials */}
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               {SOCIALS.map((s) => (
                 <Link
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full font-raleway text-[0.5rem] tracking-[0.1em] text-white border border-white/10 w-9 h-9 flex items-center justify-center hover:border-[#2a3fff] hover:text-[#2a3fff] transition-all no-underline"
+                  className="rounded-full font-raleway text-xl tracking-[0.1em] text-white hover:text-electric transition-colors duration-400 flex items-center justify-center no-underline"
                 >
-                  {s.label}
+                  {s.icon === "GrPinterest" && (
+                    <GrPinterest />
+                  )}
+                  {s.icon === "GrPhone" && (
+                    <GrPhone />
+                  )}
+                  {s.icon === "GrInstagram" && (
+                    <GrInstagram />
+                  )}
                 </Link>
               ))}
             </div>
@@ -88,7 +96,7 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          ))}
+          ))}800
         </div>
 
         {/* Commission CTA strip */}
@@ -97,7 +105,7 @@ export default function Footer() {
             Ready to make some fashion?
           </p>
           <Link
-            href="#contact"
+            href="/contact"
             className="rounded-xl font-bebas text-[0.78rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors"
           >
             Say hello
@@ -106,16 +114,16 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex justify-between items-center flex-wrap gap-4 mb-6">
-          <p className="font-raleway text-[0.52rem] tracking-wide text-white/15">
+          <p className="font-raleway text-sm tracking-wide text-white/15">
             © {new Date().getFullYear()} Araura Studio. All rights reserved.
           </p>
-          <p className="font-raleway text-[0.52rem] tracking-wide text-white/15">
+          <p className="font-raleway text-sm tracking-wide text-white/15">
             Made by{" "}
             <Link
               href="https://binaryonline.co.zw"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-electric hover:text-[#2a3fff] transition-colors no-underline border-b border-white/10 hover:border-[#2a3fff] pb-px"
+              className="text-pink-500 hover:text-[#2a3fff] animate-pulse transition-colors no-underline border-b border-white/10 hover:border-[#2a3fff] pb-px"
             >
               Binary Solutions
             </Link>

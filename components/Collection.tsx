@@ -38,7 +38,7 @@ export default function Collection() {
             GUARD
           </h2>
         </div>
-        <p className="text-[0.72rem] font-extralight leading-[1.9] text-white/70 max-w-[65ch]">
+        <p className="text-[0.72rem] font-extralight leading-[1.9] text-white/70">
           Two statements. Rooted in heritage, stripped of apology.
           Mud cloth geometry meets sculptural drape —
           this is African power dressed for the future.
@@ -85,7 +85,7 @@ export default function Collection() {
                 </div>
               </div>
               <Link
-                href="#"
+                href="/commissions"
                 className="text-[0.6rem] font-light tracking-[0.2em] uppercase text-white border border-white/70 rounded-lg px-4 py-2 no-underline transition-all duration-200 group-hover:bg-electric group-hover:text-white"
               >
                 Inquire

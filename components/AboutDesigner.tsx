@@ -11,7 +11,6 @@ export default function AboutDesigner() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90vh]">
         {/* ── Left — portrait ── */}
         <div className="relative overflow-hidden border-r border-white/[0.05] min-h-[70vh] lg:min-h-0">
-          {/* Replace div with your portrait image */}
           <Image
             src="/lord-bishop-7SXbARXk458-unsplash.jpg"
             alt="Maita — Designer"
@@ -82,7 +81,7 @@ export default function AboutDesigner() {
 
           <div className="flex items-center gap-6 pr-4 flex-wrap">
             <Link
-              href="#"
+              href="/commissions"
               className="font-bebas rounded-lg text-[0.85rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3.5 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors duration-200"
             >
               Commission a piece

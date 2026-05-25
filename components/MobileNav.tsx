@@ -35,14 +35,10 @@ export default function MobileNav() {
       {/* Drawer — slides from right */}
       <SheetContent
         side="right"
-        className="w-[280px] p-0 bg-[#05050a] border-l border-white/[0.08] flex flex-col"
+        className="w-[280px] p-0 bg-[#05050a]/95 backdrop-blur-md border-l border-white/[0.08] flex flex-col"
         // closeClassName="hidden"
         showCloseButton={false}
       >
-
-        {/* Electric blue top line */}
-        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#2a3fff] to-transparent opacity-70 flex-shrink-0" />
-
         {/* Logo row */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-white/[0.06] flex-shrink-0">
           <div>
@@ -85,9 +81,9 @@ export default function MobileNav() {
           <Link
             href="/commissions"
             onClick={close}
-            className="block font-bebas text-[0.78rem] tracking-[0.2em] uppercase text-center text-[#05050a] bg-white py-4 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors duration-200"
+            className="rounded-lg block font-bebas text-[0.78rem] tracking-[0.2em] uppercase text-center text-[#05050a] bg-white py-4 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors duration-200"
           >
-            Commission a Piece →
+            Commission a Piece
           </Link>
         </div>
 

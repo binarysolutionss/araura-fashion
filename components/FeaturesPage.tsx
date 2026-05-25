@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const PRESS = [
   {
@@ -168,12 +169,12 @@ export default function FeaturesPage() {
 
               {/* Read link */}
               <div className="flex items-center px-8 max-md:px-5 max-md:pb-6">
-                <a
+                <Link
                   href={item.href}
                   className="font-raleway text-[0.55rem] tracking-[0.2em] uppercase text-white/20 no-underline hover:text-[#2a3fff] transition-colors flex items-center gap-2 hover:gap-3 whitespace-nowrap"
                 >
-                  Read →
-                </a>
+                  Read
+                </Link>
               </div>
             </div>
           ))}
@@ -199,18 +200,18 @@ export default function FeaturesPage() {
             </p>
           </div>
           <div className="flex flex-col gap-4 lg:items-end">
-            <a
-              href="mailto:press@roberta.design"
+            < Link
+              href="#"
               className="font-bebas text-[0.85rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-10 py-4 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors"
             >
-              press@roberta.design
-            </a>
-            <a
+              press@araura.design
+            </Link>
+            <Link
               href="/contact"
               className="font-raleway text-[0.6rem] tracking-[0.18em] uppercase text-white/25 no-underline hover:text-white/50 transition-colors flex items-center gap-2 hover:gap-3"
             >
-              Use the contact form →
-            </a>
+              Use the contact form
+            </Link>
           </div>
         </div>
       </section>

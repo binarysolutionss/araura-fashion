@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-12 h-16 mix-blend-difference max-md:mix-blend-normal bg-[rgba(5,5,10,0.7)] backdrop-blur-md">
 
-      <Link href="#" className="font-bebas text-2xl tracking-[0.25em] text-white no-underline">
+      <Link href="/" className="font-bebas text-2xl tracking-[0.25em] text-white no-underline">
         ARAURA
       </Link>
 
