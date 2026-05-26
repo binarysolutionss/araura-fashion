@@ -19,7 +19,7 @@ const FEATURES = [
       "The sculptural drape collection reframes African tailoring for a generation that refuses to be categorised.",
     category: "Print",
     year: "2024",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
   },
   {
     publication: "Zimbabwe Fashion Week",
@@ -53,7 +53,7 @@ export default function Features() {
   return (
     <section className="bg-gray-950 relative overflow-hidden">
       {/* Top line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       {/* ── Feature cards ── */}
       <div className="px-14 py-16 max-md:px-6 max-md:py-12">
@@ -72,7 +72,7 @@ export default function Features() {
                 HAS BEEN
               </span>
               <br />
-              <span className="text-[#2a3fff]">NOTICED.</span>
+              <span className="text-electric">NOTICED.</span>
             </h2>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Features() {
                       {f.issue}
                     </span>
                   </div>
-                  <div className="text-right flex-shrink-0">
+                  <div className="text-right shrink-0">
                     <span className="font-bebas text-[1.5rem] text-white/80 leading-none block">
                       {f.year}
                     </span>

@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function AboutDesigner() {
   return (
-    <section className="bg-[#05050a] relative overflow-hidden border-b border-gray-500">
+    <section className="bg-black relative overflow-hidden border-b border-gray-500">
       {/* Top electric line */}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90vh]">
         {/* ── Left — portrait ── */}
-        <div className="relative overflow-hidden border-r border-white/[0.05] min-h-[70vh] lg:min-h-0">
+        <div className="relative overflow-hidden border-r border-white/5 min-h-[70vh] lg:min-h-0">
           <Image
             src="/lord-bishop-7SXbARXk458-unsplash.jpg"
             alt="Maita — Designer"
@@ -20,7 +20,7 @@ export default function AboutDesigner() {
           />
 
           {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#05050a] via-transparent to-transparent opacity-70" />
+          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-70" />
 
           {/* Bottom name stamp */}
           <div className="absolute bottom-8 left-8 z-10">
@@ -59,7 +59,7 @@ export default function AboutDesigner() {
                 NOT COSTUME.
               </span>
               <br />
-              IT IS <span className="text-[#2a3fff]">SKIN.</span>
+              IT IS <span className="text-electric">SKIN.</span>
             </h2>
 
             {/* Bio */}
@@ -82,7 +82,7 @@ export default function AboutDesigner() {
           <div className="flex items-center gap-6 pr-4 flex-wrap">
             <Link
               href="/commissions"
-              className="font-bebas rounded-lg text-[0.85rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3.5 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors duration-200"
+              className="font-bebas rounded-lg text-[0.85rem] tracking-[0.2em] uppercase text-black bg-white px-8 py-3.5 no-underline hover:bg-electric hover:text-white transition-colors duration-200"
             >
               Commission a piece
             </Link>

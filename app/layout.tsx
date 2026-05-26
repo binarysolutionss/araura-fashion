@@ -19,25 +19,27 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: "Araura Fashion",
-  description: "Fashion and garment designers in Harare, Zimbabwe. We create unique and stylish afro-centric clothing for everyone.",
+  description:
+    "Fashion and garment designers in Harare, Zimbabwe. We create unique and stylish afro-centric clothing for everyone.",
   icons: {
-    icon: "favicon.ico"
+    icon: "favicon.ico",
   },
-  metadataBase: new URL('https://araura-fashion.vercel.app'),
+  metadataBase: new URL("https://araura-fashion.vercel.app"),
   openGraph: {
-    title: 'Araura Fashion',
-    description: "Fashion and garment designers in Harare, Zimbabwe. We create unique and stylish afro-centric clothing for everyone.",
-    url: 'https://araura-fashion.vercel.app',
-    siteName: 'Araura Fashion',
-    locale: 'en_ZW',
-    type: 'website',
+    title: "Araura Fashion",
+    description:
+      "Fashion and garment designers in Harare, Zimbabwe. We create unique and stylish afro-centric clothing for everyone.",
+    url: "https://araura-fashion.vercel.app",
+    siteName: "Araura Fashion",
+    locale: "en_ZW",
+    type: "website",
   },
-  other:{
-    'geo.region': 'ZW',
-    'geo.placename': 'Harare',
+  other: {
+    "geo.region": "ZW",
+    "geo.placename": "Harare",
   },
   alternates: {
-    canonical: 'https://araura-fashion.vercel.app',
+    canonical: "https://araura-fashion.vercel.app",
   },
 };
 
@@ -48,11 +50,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${raleway.variable}`}>
-      <body className="font-raleway antialiased cursor-crosshair bg-[#05050a]">
+      <body className="font-raleway antialiased cursor-crosshair bg-black">
         <Navbar />
-          <main>
-            {children}
-          </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

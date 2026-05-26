@@ -15,7 +15,7 @@ const PIECES = [
     status: "Sold",
     src: "/collections/rohan-odhiambo-DVMRYuULLgk-unsplash.jpg",
     height: "h-[480px]",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const PIECES = [
     status: "Commissioned",
     src: "/collections/photo-1530884698386-d42ad3199b1f.jpeg",
     height: "h-[380px]",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const PIECES = [
     status: "Archive",
     src: "/collections/photo-1696962701419-6f510910e838.jpeg",
     height: "h-[500px]",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
   },
   {
     id: 6,
@@ -114,7 +114,7 @@ const PIECES = [
     status: "Available",
     src: "/collections/photo-1687052093309-7a14efa58ecb.jpeg",
     height: "h-[400px]",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
   },
   {
     id: 11,
@@ -144,21 +144,20 @@ const STATUS_COLORS: Record<string, string> = {
   Available:
     "text-[#4caf50] border-[rgba(76,175,80,0.3)] bg-[rgba(76,175,80,0.08)]",
   Commissioned:
-    "text-[#2a3fff] border-[rgba(42,63,255,0.3)] bg-[rgba(42,63,255,0.08)]",
+    "text-electric border-[rgba(42,63,255,0.3)] bg-[rgba(42,63,255,0.08)]",
   Sold: "text-white/25 border-white/10 bg-transparent",
   Archive: "text-white/25 border-white/10 bg-transparent",
 };
 
 const CollectionsGrid = () => {
-
   const [active, setActive] = useState("All");
-  
-    const filtered =
-      active === "All" ? PIECES : PIECES.filter((p) => p.collection === active);
-  
+
+  const filtered =
+    active === "All" ? PIECES : PIECES.filter((p) => p.collection === active);
+
   return (
     <div>
-      <section className="px-14 py-14 max-md:px-6 max-md:py-10 bg-[radial-gradient(circle_at_top,_rgba(200,145,102,0.14),transparent_18%),linear-gradient(180deg,#08080d_0%,#05050a_60%,#0b0b13_100%)]">
+      <section className="px-14 py-14 max-md:px-6 max-md:py-10 bg-[radial-gradient(circle_at_top,rgba(200,145,102,0.14),transparent_18%),linear-gradient(180deg,#08080d_0%,#05050a_60%,#0b0b13_100%)]">
         {/* Filter bar */}
         <div className="flex items-center justify-between mb-10 max-md:flex-col max-md:items-start max-md:gap-4">
           <p className="font-raleway text-[0.52rem] tracking-[0.3em] uppercase text-electric">
@@ -172,7 +171,7 @@ const CollectionsGrid = () => {
                 className={`rounded-xl font-raleway text-[0.58rem] tracking-[0.18em] uppercase px-4 py-2 border transition-all duration-200 cursor-pointer
                   ${
                     active === f
-                      ? "bg-white text-[#05050a] border-white font-bold"
+                      ? "bg-white text-black border-white font-bold"
                       : "bg-transparent text-white/30 border-white/10 hover:border-white/30 hover:text-white/60"
                   }`}
               >
@@ -184,13 +183,13 @@ const CollectionsGrid = () => {
 
         {/* Masonry — CSS columns */}
         <div
-        //   style={{ columnGap: "3px" }}
+          //   style={{ columnGap: "3px" }}
           className="columns-1 gap-2 md:columns-2 lg:columns-3"
         >
           {filtered.map((piece) => (
             <div
               key={piece.id}
-              className="break-inside-avoid mb-[3px] relative overflow-hidden group cursor-pointer bg-[#0d0d18] duration-300"
+              className="break-inside-avoid mb-0.75 relative overflow-hidden group cursor-pointer bg-[#0d0d18] duration-300"
               style={{ display: "inline-block", width: "100%" }}
             >
               <div className={`relative ${piece.height} w-full`}>
@@ -202,7 +201,7 @@ const CollectionsGrid = () => {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Status badge */}
                 <div className="absolute top-4 left-4 z-10">
@@ -215,7 +214,7 @@ const CollectionsGrid = () => {
 
                 {/* Hover info */}
                 <div className="absolute bottom-0 left-0 right-0 px-5 py-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-10">
-                  <span className="font-raleway text-[0.45rem] tracking-[0.22em] uppercase text-[#2a3fff] block mb-1">
+                  <span className="font-raleway text-[0.45rem] tracking-[0.22em] uppercase text-electric block mb-1">
                     {piece.collection}
                   </span>
                   <span className="font-bebas text-[1.1rem] tracking-[0.06em] text-white leading-none block mb-1">
@@ -228,7 +227,7 @@ const CollectionsGrid = () => {
 
                 {/* Coloured left flash */}
                 <div
-                  className={`absolute left-0 top-0 bottom-0 w-0 group-hover:w-[3px] transition-all duration-200`}
+                  className={`absolute left-0 top-0 bottom-0 w-0 group-hover:w-0.75 transition-all duration-200`}
                 />
               </div>
             </div>
@@ -236,7 +235,7 @@ const CollectionsGrid = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default CollectionsGrid
+export default CollectionsGrid;

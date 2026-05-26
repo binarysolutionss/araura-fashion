@@ -6,13 +6,19 @@ export default function AboutPage() {
   return (
     <>
       {/* ── STORY ── */}
-      <section className="bg-[#05050a]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[2px] bg-white/[0.03]">
+      <section className="bg-black">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0.5 bg-white/3">
           {/* Portrait */}
           <div className="relative overflow-hidden bg-[#0d0d18] min-h-[60vh]">
-            <Image src="/lord-bishop-7SXbARXk458-unsplash.jpg" alt="Maita" fill className="object-cover object-top grayscale" sizes="(max-width:1024px) 100vw, 50vw" />
+            <Image
+              src="/lord-bishop-7SXbARXk458-unsplash.jpg"
+              alt="Maita"
+              fill
+              className="object-cover object-top grayscale"
+              sizes="(max-width:1024px) 100vw, 50vw"
+            />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#05050a] via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-60" />
             <span
               className="absolute bottom-8 left-8 font-bebas text-[5rem] leading-none tracking-wide text-transparent pointer-events-none"
               style={{ WebkitTextStroke: "1px rgba(255,255,255,0.06)" }}
@@ -29,7 +35,7 @@ export default function AboutPage() {
 
             <h2 className="font-bebas text-[clamp(2rem,3.5vw,3.5rem)] leading-[0.95] tracking-wide text-white mb-8">
               BORN FROM A<br />
-              <span className="text-[#2a3fff]">REFUSAL</span>
+              <span className="text-electric">REFUSAL</span>
               <br />
               TO CONFORM.
             </h2>
@@ -56,7 +62,7 @@ export default function AboutPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-[1px] bg-white/[0.05]">
+            <div className="grid grid-cols-3 gap-px bg-white/5">
               {[
                 { num: "2019", label: "Founded" },
                 { num: "6+", label: "Features" },
@@ -64,7 +70,7 @@ export default function AboutPage() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="bg-[#05050a] px-5 py-4 text-center hover:bg-[#0d0d18] transition-colors"
+                  className="bg-black px-5 py-4 text-center hover:bg-[#0d0d18] transition-colors"
                 >
                   <span className="font-bebas text-[1.4rem] text-white leading-none block">
                     {s.num}
@@ -78,7 +84,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

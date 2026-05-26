@@ -17,7 +17,7 @@ const PRESS = [
     issue: "Heritage Edition",
     category: "Print",
     year: "2024",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
     quote:
       "The sculptural drape collection reframes African tailoring for a generation that refuses to be categorised. There is a rigour to Maita's construction that feels genuinely new.",
     href: "#",
@@ -47,7 +47,7 @@ const PRESS = [
     issue: "Style Feature",
     category: "Digital",
     year: "2023",
-    color: "bg-[#2a3fff]",
+    color: "bg-electric",
     quote:
       "This is what African fashion looks like when it refuses to perform for anyone. Raw, structural, and deeply considered.",
     href: "#",
@@ -77,11 +77,11 @@ export default function FeaturesPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="bg-[#05050a] pt-16 relative overflow-hidden">
-        <div className="h-[2px] bg-gradient-to-r from-transparent via-[#2a3fff] to-transparent opacity-60" />
+      <section className="bg-black pt-16 relative overflow-hidden">
+        <div className="h-0.5 bg-linear-to-r from-transparent via-electric to-transparent opacity-60" />
 
         <span
-          className="hidden lg:block absolute bottom-[-1rem] right-[-1rem] font-bebas leading-none text-transparent pointer-events-none select-none"
+          className="hidden lg:block absolute -bottom-4 -right-4 font-bebas leading-none text-transparent pointer-events-none select-none"
           style={{
             fontSize: "clamp(8rem,18vw,18rem)",
             WebkitTextStroke: "1px rgba(255,255,255,0.03)",
@@ -96,7 +96,7 @@ export default function FeaturesPage() {
           </p>
           <h1 className="font-bebas text-[clamp(3.5rem,9vw,10rem)] leading-[0.9] tracking-wide mb-8">
             <span className="block text-white">THE WORK</span>
-            <span className="block text-[#2a3fff]">HAS BEEN</span>
+            <span className="block text-electric">HAS BEEN</span>
             <span
               className="block text-transparent"
               style={{ WebkitTextStroke: "2px rgba(255,255,255,0.45)" }}
@@ -111,14 +111,14 @@ export default function FeaturesPage() {
         </div>
 
         {/* Logo strip */}
-        <div className="border-t border-white/[0.05] px-14 py-6 max-md:px-6">
+        <div className="border-t border-white/5 px-14 py-6 max-md:px-6">
           <div className="flex items-center flex-wrap">
             {LOGOS.map((logo, i) => (
               <div
                 key={i}
-                className="flex-1 min-w-[100px] border-r border-white/[0.06] last:border-r-0 px-6 py-2 flex items-center justify-center group max-sm:min-w-[80px] max-sm:px-3"
+                className="flex-1 min-w-25 border-r border-white/6 last:border-r-0 px-6 py-2 flex items-center justify-center group max-sm:min-w-20 max-sm:px-3"
               >
-                <span className="font-bebas text-[0.95rem] tracking-[0.1em] text-white/15 group-hover:text-white/45 transition-colors">
+                <span className="font-bebas text-[0.95rem] tracking-widest text-white/15 group-hover:text-white/45 transition-colors">
                   {logo}
                 </span>
               </div>
@@ -128,17 +128,17 @@ export default function FeaturesPage() {
       </section>
 
       {/* ── PRESS CARDS ── */}
-      <section className="bg-[#05050a] px-14 py-14 max-md:px-6 max-md:py-10">
+      <section className="bg-black px-14 py-14 max-md:px-6 max-md:py-10">
         <p className="flex items-center gap-3 font-raleway text-[0.52rem] tracking-[0.35em] uppercase text-white/20 mb-10">
-          <span className="inline-block w-6 h-px bg-white/20 flex-shrink-0" />
+          <span className="inline-block w-6 h-px bg-white/20 shrink-0" />
           {PRESS.length} Features
         </p>
 
-        <div className="flex flex-col gap-[1px] bg-white/[0.04]">
+        <div className="flex flex-col gap-px bg-white/4">
           {PRESS.map((item, i) => (
             <div
               key={i}
-              className="bg-[#05050a] hover:bg-[#0d0d18] transition-colors duration-300 group grid grid-cols-1 md:grid-cols-[180px_1fr_auto]"
+              className="bg-black hover:bg-[#0d0d18] transition-colors duration-300 group grid grid-cols-1 md:grid-cols-[180px_1fr_auto]"
             >
               {/* Colour year column */}
               <div
@@ -160,7 +160,7 @@ export default function FeaturesPage() {
                 <span className="font-raleway text-[0.55rem] tracking-[0.15em] uppercase text-white/30 block mb-5">
                   {item.issue}
                 </span>
-                <div className="border-l-[2px] border-[#2a3fff] pl-5">
+                <div className="border-l-2 border-electric pl-5">
                   <p className="font-raleway italic text-[0.85rem] leading-[1.75] text-white/40 font-light">
                     &ldquo;{item.quote}&rdquo;
                   </p>
@@ -171,7 +171,7 @@ export default function FeaturesPage() {
               <div className="flex items-center px-8 max-md:px-5 max-md:pb-6">
                 <Link
                   href={item.href}
-                  className="font-raleway text-[0.55rem] tracking-[0.2em] uppercase text-white/20 no-underline hover:text-[#2a3fff] transition-colors flex items-center gap-2 hover:gap-3 whitespace-nowrap"
+                  className="font-raleway text-[0.55rem] tracking-[0.2em] uppercase text-white/20 no-underline hover:text-electric transition-colors flex items-center gap-2 hover:gap-3 whitespace-nowrap"
                 >
                   Read
                 </Link>
@@ -182,17 +182,17 @@ export default function FeaturesPage() {
       </section>
 
       {/* ── CONTACT CTA ── */}
-      <section className="bg-[#05050a] px-14 py-16 border-t border-white/[0.05] max-md:px-6 max-md:py-12">
+      <section className="bg-black px-14 py-16 border-t border-white/5 max-md:px-6 max-md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="flex items-center gap-3 font-raleway text-[0.52rem] tracking-[0.35em] uppercase text-white/20 mb-6">
-              <span className="inline-block w-6 h-px bg-white/20 flex-shrink-0" />
+              <span className="inline-block w-6 h-px bg-white/20 shrink-0" />
               Press Enquiries
             </p>
             <h2 className="font-bebas text-[clamp(2.5rem,4vw,4rem)] leading-[0.95] tracking-wide text-white mb-6">
               WORKING ON
               <br />
-              <span className="text-[#2a3fff]">SOMETHING?</span>
+              <span className="text-electric">SOMETHING?</span>
             </h2>
             <p className="font-raleway text-[0.85rem] font-light leading-[1.85] text-white/35 max-w-[44ch]">
               For editorial requests, styling loans, interviews or collaboration
@@ -200,9 +200,9 @@ export default function FeaturesPage() {
             </p>
           </div>
           <div className="flex flex-col gap-4 lg:items-end">
-            < Link
+            <Link
               href="#"
-              className="font-bebas text-[0.85rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-10 py-4 no-underline hover:bg-[#2a3fff] hover:text-white transition-colors"
+              className="font-bebas text-[0.85rem] tracking-[0.2em] uppercase text-black bg-white px-10 py-4 no-underline hover:bg-electric hover:text-white transition-colors"
             >
               press@araura.design
             </Link>

@@ -21,17 +21,23 @@ const pieces = [
 
 export default function Collection() {
   return (
-    <section id="collection" className="bg-[#05050a] px-12 py-32 max-md:px-6 max-md:py-20">
-
+    <section
+      id="collection"
+      className="bg-black px-12 py-32 max-md:px-6 max-md:py-20"
+    >
       {/* Header */}
-      <div className="grid grid-cols-1 items-end gap-8 mb-20 pb-8 border-b border-white/[0.06]">
+      <div className="grid grid-cols-1 items-end gap-8 mb-20 pb-8 border-b border-white/6">
         <div>
           <p className="flex items-center gap-3 text-[0.6rem] font-light tracking-[0.4em] uppercase text-electric mb-4">
             Latest Pieces
           </p>
           <h2 className="font-bebas text-[clamp(3rem,6vw,6rem)] leading-[0.9] tracking-wider text-white">
-            THE<br />
-            <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(240,240,240,0.3)" }}>
+            THE
+            <br />
+            <span
+              className="text-transparent"
+              style={{ WebkitTextStroke: "1.5px rgba(240,240,240,0.3)" }}
+            >
               NEW
             </span>
             <br />
@@ -39,17 +45,19 @@ export default function Collection() {
           </h2>
         </div>
         <p className="text-[0.72rem] font-extralight leading-[1.9] text-white/70">
-          Two statements. Rooted in heritage, stripped of apology.
-          Mud cloth geometry meets sculptural drape —
-          this is African power dressed for the future.
+          Two statements. Rooted in heritage, stripped of apology. Mud cloth
+          geometry meets sculptural drape — this is African power dressed for
+          the future.
         </p>
       </div>
 
       {/* Pieces grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {pieces.map((piece) => (
-          <div key={piece.num} className="relative overflow-hidden bg-[#05050a] group cursor-crosshair rounded-xl">
-
+          <div
+            key={piece.num}
+            className="relative overflow-hidden bg-black group cursor-crosshair rounded-xl"
+          >
             {/* Ghost number */}
             <span
               className="absolute top-8 right-8 z-10 font-bebas text-[4rem] leading-none text-transparent pointer-events-none select-none"
@@ -94,7 +102,6 @@ export default function Collection() {
           </div>
         ))}
       </div>
-
     </section>
   );
 }

@@ -7,7 +7,7 @@ import Features from "@/components/Features";
 
 export default function Home() {
   return (
-    <main className="bg-[#05050a]">
+    <main className="bg-black">
       <Hero />
       <Marquee />
       <AboutDesigner />

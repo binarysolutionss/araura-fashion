@@ -27,11 +27,10 @@ export default function Commissions() {
   const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
 
   return (
-    <section id="contact" className="bg-[#05050a] relative overflow-hidden">
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-white/[0.04]">
+    <section id="contact" className="bg-black relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/4">
         {/* ── Left — info ── */}
-        <div className="bg-[#05050a] px-14 py-20 flex flex-col justify-between max-md:px-6 max-md:py-12">
+        <div className="bg-black px-14 py-20 flex flex-col justify-between max-md:px-6 max-md:py-12">
           <div>
             <p className="flex items-center gap-3 font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-white/25 mb-4">
               Get in Touch
@@ -40,7 +39,7 @@ export default function Commissions() {
             <h2 className="font-bebas text-[clamp(3rem,5vw,5.5rem)] leading-[0.95] tracking-wide text-electric mb-4">
               WEAR YOUR
               <br />
-              <span className="text-[#2a3fff]">TRUTH.</span>
+              <span className="text-electric">TRUTH.</span>
               <br />
               <span
                 className="text-transparent"
@@ -57,7 +56,7 @@ export default function Commissions() {
             </p>
 
             {/* Contact details */}
-            <div className=" hidden flex flex-col gap-[1px] bg-white/[0.04] mb-12">
+            {/* <div className="flex flex-col gap-px bg-white/4 mb-12">
               {[
                 {
                   label: "Email",
@@ -73,7 +72,7 @@ export default function Commissions() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-[#05050a] flex items-center hover:bg-[#0d0d18] transition-colors gap-0"
+                  className="bg-black flex items-center hover:bg-[#0d0d18] transition-colors gap-0"
                 >
                   <div
                     className={`flex items-center justify-center w-2 h-2 rounded-full ${
@@ -86,9 +85,7 @@ export default function Commissions() {
                             : "bg-[#2a2a2a]"
                     }`}
                   >
-                    <span className="font-raleway text-[0.45rem] tracking-[0.2em] text-white/50 text-center">
-                      {/* {item.label} */}
-                    </span>
+                  
                   </div>
                   <div className="px-6 py-4 flex items-center">
                     {item.href ? (
@@ -114,9 +111,9 @@ export default function Commissions() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            <div className="relative mt-6 h-90 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
+            <div className="relative mt-6 h-90 overflow-hidden rounded-xl border border-white/8 bg-white/2">
               <Image
                 src="/fanueal-mengistu-gcLzTsvpzC8-unsplash.jpg"
                 alt="Textile detail in the background"
@@ -124,7 +121,7 @@ export default function Commissions() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-80"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#05050a]/85 via-[#05050a]/15 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-raleway text-[0.5rem] tracking-[0.3em] uppercase text-white/50 mb-1">
                   Atelier Detail
@@ -138,7 +135,7 @@ export default function Commissions() {
         </div>
 
         {/* ── Right — enquiry form ── */}
-        <div className="bg-[#05050a] px-14 py-20 max-md:px-6 max-md:py-12">
+        <div className="bg-black px-14 py-20 max-md:px-6 max-md:py-12">
           <div className="mb-8">
             <p className="font-raleway text-[0.55rem] tracking-[0.35em] uppercase text-electric mb-4">
               Send an Enquiry
@@ -151,10 +148,10 @@ export default function Commissions() {
 
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-[1px] shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+            className="relative overflow-hidden rounded-xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-px shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
           >
             <div className="rounded-[calc(1.5rem-1px)] bg-[#09090f]">
-              <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-white/[0.08]">
+              <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-white/8">
                 <div>
                   <p className="font-raleway text-[0.5rem] tracking-[0.3em] uppercase text-white/25">
                     Atelier Brief
@@ -163,14 +160,14 @@ export default function Commissions() {
                     BESPOKE INQUIRY
                   </p>
                 </div>
-                <div className="rounded-full border border-white/[0.1] bg-white/[0.02] px-3 py-1 text-[0.55rem] tracking-[0.2em] uppercase text-white/45">
+                <div className="rounded-full border border-white/1 bg-white/2 px-3 py-1 text-[0.55rem] tracking-[0.2em] uppercase text-white/45">
                   48h response
                 </div>
               </div>
 
               {/* Name row */}
-              <div className="grid grid-cols-2 border-b border-white/[0.08] max-sm:grid-cols-1">
-                <div className="flex flex-col gap-2 px-6 py-5 border-r border-white/[0.08] max-sm:border-r-0 max-sm:border-b">
+              <div className="grid grid-cols-2 border-b border-white/8 max-sm:grid-cols-1">
+                <div className="flex flex-col gap-2 px-6 py-5 border-r border-white/8 max-sm:border-r-0 max-sm:border-b">
                   <label className="font-raleway text-[0.48rem] tracking-[0.28em] uppercase text-white/25">
                     First Name
                   </label>
@@ -193,7 +190,7 @@ export default function Commissions() {
               </div>
 
               {/* Commission type chips */}
-              <div className="px-6 py-5 border-b border-white/[0.08]">
+              <div className="px-6 py-5 border-b border-white/8">
                 <div className="flex items-center justify-between gap-4 mb-4">
                   <label className="font-raleway text-[0.48rem] tracking-[0.28em] uppercase text-white/25">
                     Type of Enquiry
@@ -213,7 +210,7 @@ export default function Commissions() {
                       className={`font-raleway text-[0.6rem] tracking-[0.12em] uppercase px-3.5 py-2 rounded-full border transition-all duration-200 cursor-pointer
                         ${
                           selectedType === type
-                            ? "bg-white text-[#05050a] border-white shadow-[0_8px_24px_rgba(255,255,255,0.18)]"
+                            ? "bg-white text-black border-white shadow-[0_8px_24px_rgba(255,255,255,0.18)]"
                             : "bg-transparent text-white/40 border-white/10 hover:border-white/30 hover:text-white/75"
                         }`}
                     >
@@ -224,7 +221,7 @@ export default function Commissions() {
               </div>
 
               {/* Budget chips */}
-              <div className="px-6 py-5 border-b border-white/[0.08]">
+              <div className="px-6 py-5 border-b border-white/8">
                 <div className="flex items-center justify-between gap-4 mb-4">
                   <label className="font-raleway text-[0.48rem] tracking-[0.28em] uppercase text-white/25">
                     Budget Range
@@ -244,7 +241,7 @@ export default function Commissions() {
                       className={`font-raleway text-[0.6rem] tracking-[0.12em] uppercase px-3.5 py-2 rounded-full border transition-all duration-200 cursor-pointer
                         ${
                           selectedBudget === b
-                            ? "bg-[#2a3fff] text-white border-[#2a3fff] shadow-[0_8px_24px_rgba(42,63,255,0.28)]"
+                            ? "bg-electric text-white border-electric shadow-[0_8px_24px_rgba(42,63,255,0.28)]"
                             : "bg-transparent text-white/40 border-white/10 hover:border-white/30 hover:text-white/75"
                         }`}
                     >
@@ -255,7 +252,7 @@ export default function Commissions() {
               </div>
 
               {/* Message */}
-              <div className="flex flex-col gap-2 px-6 py-5 border-b border-white/[0.08]">
+              <div className="flex flex-col gap-2 px-6 py-5 border-b border-white/8">
                 <label className="font-raleway text-[0.48rem] tracking-[0.28em] uppercase text-white/25">
                   Tell Us About Your Vision
                 </label>
@@ -282,7 +279,7 @@ export default function Commissions() {
                 </div>
                 <button
                   type="submit"
-                  className="font-bebas text-[0.82rem] tracking-[0.2em] uppercase text-[#05050a] bg-white px-8 py-3.5 rounded-xl border-none cursor-pointer hover:bg-[#2a3fff] hover:text-white transition-all duration-200 max-sm:w-full max-sm:text-center"
+                  className="font-bebas text-[0.82rem] tracking-[0.2em] uppercase text-black bg-white px-8 py-3.5 rounded-xl border-none cursor-pointer hover:bg-electric hover:text-white transition-all duration-200 max-sm:w-full max-sm:text-center"
                 >
                   Send Enquiry
                 </button>
