@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Araura Fashion",
     title: "Araura Fashion | Curated Clothing & Accessories",
     description:
-      "Discover unique pieces that blend style and comfort with Araura Fashion.",
+      "Discover unique African heritage themed fashion pieces that blend style and comfort with Araura Fashion.",
     images: [
       {
         url: "/og-image.jpg", // Add a 1200x630 image in /public
